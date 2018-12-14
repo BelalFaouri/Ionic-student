@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Student Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="ml-4 mt-5">
+    <div>
+      <h5 class='d-inline'>Student Name: </h5>
+      <h5 class="d-inline font-weight-normal">{{student.first_name + " " + student.last_name}}</h5>
+    </div>
+    <div>
+      <h5 class='d-inline'>Birth date: </h5>
+      <h5 class="d-inline font-weight-normal">{{student.birth_date.toLocaleDateString()}}</h5>
+    </div>
+    <div>
+      <h5 class='d-inline'>Email: </h5>
+      <h5 class="d-inline font-weight-normal">{{student.email}}</h5>
+    </div>
+
+  </div>
+</ion-content>
